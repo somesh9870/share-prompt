@@ -22,7 +22,7 @@ const MyProfile = () => {
     if (session?.user.id) {
       fetchPosts();
     }
-  }, []);
+  }, [session?.user.id]);
 
   const handleEdit = () => {};
 
@@ -31,8 +31,8 @@ const MyProfile = () => {
   return (
     <Profile
       name="My"
-      desc="Welcome to your personalized profile page"
-      data={[]}
+      desc="Welcome to your personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination"
+      data={posts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
     />
